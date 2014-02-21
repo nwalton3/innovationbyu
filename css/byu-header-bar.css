@@ -1,0 +1,364 @@
+/* Variables */
+/* line 9, ../sass/byu-header-bar.scss */
+html, body {
+  margin: 0;
+}
+
+/* line 18, ../sass/byu-header-bar.scss */
+#byu-bar .sign-in {
+  background-color: #628cb6;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 18px;
+  text-decoration: none;
+  position: absolute;
+  top: 4px;
+  right: 3%;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
+  background: #4a79a7;
+  background: -webkit-linear-gradient(top, #628cb6, #336699);
+  background: -moz-linear-gradient(top, #628cb6, #336699);
+  background: -ms-linear-gradient(top, #628cb6, #336699);
+  background: -o-linear-gradient(top, #628cb6, #336699);
+  background: linear-gradient(top, #628cb6, #336699);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+/* line 32, ../sass/byu-header-bar.scss */
+#byu-bar .sign-in:hover, #byu-bar .sign-in:active {
+  margin: -2px;
+  background-color: #336699;
+  border: 2px solid #abc8e4;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+  background: #366797;
+  background: -webkit-linear-gradient(top, #4a79a7, #225588);
+  background: -moz-linear-gradient(top, #4a79a7, #225588);
+  background: -ms-linear-gradient(top, #4a79a7, #225588);
+  background: -o-linear-gradient(top, #4a79a7, #225588);
+  background: linear-gradient(top, #4a79a7, #225588);
+}
+/* line 42, ../sass/byu-header-bar.scss */
+#byu-bar a.byulink {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  display: inline-block;
+  height: 26px;
+  width: 90px;
+  background: transparent url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-sm.png") 0px 0px no-repeat;
+}
+/* line 48, ../sass/byu-header-bar.scss */
+.svg #byu-bar a.byulink {
+  background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-sm.svg");
+}
+/* line 53, ../sass/byu-header-bar.scss */
+#byu-bar a.byu {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  display: block;
+  height: 30px;
+}
+/* line 59, ../sass/byu-header-bar.scss */
+#byu-bar a.parentlink {
+  font-family: "DroidSerif","CreteRound","Palatino","DroidSerif","Droid Serif",Georgia,serif;
+  text-shadow: 0 0 6px rgba(0, 25, 72, 0.65);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  display: inline-block;
+  padding: 6px 8px 2px;
+  color: #d1e4f6;
+  line-height: 1.2;
+  height: 26px;
+  vertical-align: top;
+}
+/* line 71, ../sass/byu-header-bar.scss */
+#byu-bar a.parentlink:hover {
+  color: #ffe;
+}
+/* line 82, ../sass/byu-header-bar.scss */
+#byu-bar #search-container {
+  width: 300px;
+  padding: 0;
+  height: 32px;
+  position: relative;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  background: #4a79a7;
+  background: -webkit-linear-gradient(top, #628cb6, #336699);
+  background: -moz-linear-gradient(top, #628cb6, #336699);
+  background: -ms-linear-gradient(top, #628cb6, #336699);
+  background: -o-linear-gradient(top, #628cb6, #336699);
+  background: linear-gradient(top, #628cb6, #336699);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+/* line 97, ../sass/byu-header-bar.scss */
+#byu-bar #search-container textarea:hover,
+#byu-bar #search-container input:hover,
+#byu-bar #search-container textarea:active,
+#byu-bar #search-container input:active,
+#byu-bar #search-container textarea:focus,
+#byu-bar #search-container input:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+/* line 104, ../sass/byu-header-bar.scss */
+#byu-bar #basic-search {
+  position: relative;
+  padding-right: 77px;
+  padding-left: 5px;
+  padding-top: 4px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  padding: 0;
+  padding-right: 43px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 117, ../sass/byu-header-bar.scss */
+#byu-bar #basic-search label {
+  color: #fff;
+}
+/* line 123, ../sass/byu-header-bar.scss */
+#byu-bar #basic-search #search {
+  margin-bottom: 0;
+  vertical-align: top;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  padding: 5px 10px !important;
+  border: 0 !important;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+/* line 134, ../sass/byu-header-bar.scss */
+#byu-bar #basic-search #search {
+  border: 0 !important;
+  padding: 6px 8px 6px 14px !important;
+  background-position: 14px 50% !important;
+  height: 32px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+/* line 144, ../sass/byu-header-bar.scss */
+#byu-bar #basic-search #search::selection {
+  border: 0;
+}
+/* line 150, ../sass/byu-header-bar.scss */
+#byu-bar #search-submit {
+  display: block;
+  position: absolute;
+  background: url(../img/search_box_icon.png) 8px 8px no-repeat;
+  overflow: hidden;
+  text-indent: -1000px;
+  margin: 0;
+  padding: 5px;
+  padding-left: 0;
+  width: 34px;
+  top: 1px;
+  right: 5px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 168, ../sass/byu-header-bar.scss */
+#byu-bar #search-submit:active, #byu-bar #search-submit:hover {
+  right: 7px;
+  cursor: pointer;
+}
+
+/* line 176, ../sass/byu-header-bar.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Variables */
+/* line 9, ../sass/responsive/_byu-bar.scss */
+#byu-bar {
+  font-size: 14px;
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  width: 100%;
+  padding: 2px 0;
+  background-color: #001948;
+  border-bottom: 1px solid black;
+  min-width: 120px;
+  height: 30px;
+  white-space: nowrap;
+}
+/* line 20, ../sass/responsive/_byu-bar.scss */
+.svg #byu-bar {
+  background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-header-bg.svg");
+}
+/* line 24, ../sass/responsive/_byu-bar.scss */
+#byu-bar h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: absolute;
+  font-size: 1em;
+  width: 100%;
+}
+/* line 33, ../sass/responsive/_byu-bar.scss */
+#byu-bar a.byu {
+  background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo.png");
+}
+/* line 35, ../sass/responsive/_byu-bar.scss */
+.svg #byu-bar a.byu {
+  background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo.svg");
+}
+/* line 40, ../sass/responsive/_byu-bar.scss */
+#byu-bar a.byulink {
+  margin-left: 6px;
+}
+/* line 44, ../sass/responsive/_byu-bar.scss */
+#byu-bar a.parentlink {
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 98px;
+  padding-right: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 59, ../sass/responsive/_byu-bar.scss */
+#byu-bar.button a.parentlink {
+  padding-right: 110px;
+}
+/* line 63, ../sass/responsive/_byu-bar.scss */
+#byu-bar.search a.parentlink {
+  padding-right: 40%;
+}
+/* line 67, ../sass/responsive/_byu-bar.scss */
+#byu-bar.search.button a.parentlink {
+  width: 65%;
+  padding-right: 100px;
+}
+/* line 72, ../sass/responsive/_byu-bar.scss */
+#byu-bar #search-container {
+  height: 27px;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 40%;
+  min-width: 120px;
+  max-width: 400px;
+}
+/* line 82, ../sass/responsive/_byu-bar.scss */
+#byu-bar #basic-search #search {
+  height: 27px;
+}
+/* line 86, ../sass/responsive/_byu-bar.scss */
+#byu-bar #search-submit {
+  top: 0;
+}
+/* line 88, ../sass/responsive/_byu-bar.scss */
+#byu-bar #search-submit:active, #byu-bar #search-submit:hover {
+  right: 5px;
+}
+/* line 93, ../sass/responsive/_byu-bar.scss */
+#byu-bar.search .sign-in {
+  margin-right: 35%;
+}
+/* line 97, ../sass/responsive/_byu-bar.scss */
+#byu-bar.button #search-container {
+  width: 35%;
+}
+
+@media all and (min-width: 400px) {
+  /* line 108, ../sass/responsive/_byu-bar.scss */
+  #byu-bar a.byu {
+    width: 345px;
+  }
+
+  /* line 112, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search a.byu,
+  #byu-bar.button a.byu {
+    width: 80px;
+  }
+}
+@media all and (min-width: 500px) {
+  /* line 120, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.button a.byu {
+    width: 345px;
+  }
+
+  /* line 121, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search.button a.byu {
+    width: 80px;
+  }
+}
+@media all and (min-width: 600px) {
+  /* line 125, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search a.byu {
+    width: 345px;
+  }
+
+  /* line 126, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search.button a.byu {
+    width: 80px;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 130, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search.button a.byu {
+    width: 345px;
+  }
+}

@@ -1,0 +1,1576 @@
+/* Base.css
+* The lowest common demoninator style definitions which all browsers will load. No CSS3.
+*/
+/* Variables */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 22, ../sass/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, ../sass/base/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../sass/base/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, ../sass/base/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Set default font family to sans-serif.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 68, ../sass/base/_normalize.scss */
+html {
+  background: #fff;
+  /* 1 */
+  color: #000;
+  /* 2 */
+  font-family: sans-serif;
+  /* 3 */
+  -ms-text-size-adjust: 100%;
+  /* 4 */
+  -webkit-text-size-adjust: 100%;
+  /* 4 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 80, ../sass/base/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 92, ../sass/base/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 101, ../sass/base/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 114, ../sass/base/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 123, ../sass/base/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 132, ../sass/base/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 140, ../sass/base/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 148, ../sass/base/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 158, ../sass/base/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 170, ../sass/base/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 179, ../sass/base/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 187, ../sass/base/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 195, ../sass/base/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 204, ../sass/base/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 211, ../sass/base/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 215, ../sass/base/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 227, ../sass/base/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 235, ../sass/base/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 247, ../sass/base/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 259, ../sass/base/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 270, ../sass/base/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 284, ../sass/base/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 296, ../sass/base/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 308, ../sass/base/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 323, ../sass/base/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 333, ../sass/base/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 343, ../sass/base/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 354, ../sass/base/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 367, ../sass/base/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 376, ../sass/base/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 386, ../sass/base/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 399, ../sass/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 17, ../sass/base/_h5bp.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 21, ../sass/base/_h5bp.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 32, ../sass/base/_h5bp.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 37, ../sass/base/_h5bp.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 46, ../sass/base/_h5bp.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+/* line 59, ../sass/base/_h5bp.scss */
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 67, ../sass/base/_h5bp.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 77, ../sass/base/_h5bp.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 85, ../sass/base/_h5bp.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 120, ../sass/base/_h5bp.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 128, ../sass/base/_h5bp.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 139, ../sass/base/_h5bp.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 148, ../sass/base/_h5bp.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 165, ../sass/base/_h5bp.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 178, ../sass/base/_h5bp.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 195, ../sass/base/_h5bp.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 200, ../sass/base/_h5bp.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 209, ../sass/base/_h5bp.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 1, ../sass/base/_prettify.scss */
+.com {
+  color: #93a1a1;
+}
+
+/* line 2, ../sass/base/_prettify.scss */
+.lit {
+  color: #195f91;
+}
+
+/* line 3, ../sass/base/_prettify.scss */
+.pun, .opn, .clo {
+  color: #93a1a1;
+}
+
+/* line 4, ../sass/base/_prettify.scss */
+.fun {
+  color: #dc322f;
+}
+
+/* line 5, ../sass/base/_prettify.scss */
+.str, .atv {
+  color: #D14;
+}
+
+/* line 6, ../sass/base/_prettify.scss */
+.kwd, .prettyprint .tag {
+  color: #1e347b;
+}
+
+/* line 7, ../sass/base/_prettify.scss */
+.typ, .atn, .dec, .var {
+  color: teal;
+}
+
+/* line 8, ../sass/base/_prettify.scss */
+.pln {
+  color: #48484c;
+}
+
+/* line 10, ../sass/base/_prettify.scss */
+.prettyprint {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+/* line 15, ../sass/base/_prettify.scss */
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+  -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+  box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+/* line 22, ../sass/base/_prettify.scss */
+ol.linenums {
+  margin: 0 0 0 33px;
+  /* IE indents via margin-left */
+}
+
+/* line 25, ../sass/base/_prettify.scss */
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/*** Base tags ***/
+/* line 6, ../sass/base/_basics.scss */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 7, ../sass/base/_basics.scss */
+body em {
+  font-style: italic;
+}
+
+/* line 8, ../sass/base/_basics.scss */
+body strong {
+  font-weight: bold;
+}
+
+/* line 9, ../sass/base/_basics.scss */
+body, select, input, textarea {
+  color: #444444;
+}
+
+/* line 10, ../sass/base/_basics.scss */
+p a {
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+/* line 12, ../sass/base/_basics.scss */
+blockquote {
+  margin: 1.5em 10px;
+  padding: .5em 10px;
+  color: #333;
+  margin: 25px 20px 25px 0;
+  padding: 3px 25px;
+  position: relative;
+}
+
+/* line 20, ../sass/base/_basics.scss */
+blockquote:before {
+  color: #bbb;
+  content: "\201C";
+  font-size: 3em;
+  line-height: .1em;
+  vertical-align: -.4em;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 1px;
+}
+
+/* line 31, ../sass/base/_basics.scss */
+blockquote:after {
+  color: #bbb;
+  content: "\201D";
+  font-size: 3em;
+  line-height: .1em;
+  vertical-align: -.45em;
+}
+
+/* line 32, ../sass/base/_basics.scss */
+blockquote :first-child {
+  display: inline;
+}
+
+/* Links */
+/* line 36, ../sass/base/_basics.scss */
+a, a:link {
+  color: #336699;
+  text-decoration: none;
+}
+
+/* line 37, ../sass/base/_basics.scss */
+a:hover {
+  color: #002255;
+  text-decoration: underline;
+}
+
+/* line 38, ../sass/base/_basics.scss */
+a:active {
+  color: #c00;
+}
+
+/* line 39, ../sass/base/_basics.scss */
+a:visited {
+  color: #539;
+}
+
+/* Images */
+/* line 42, ../sass/base/_basics.scss */
+img {
+  max-width: 100%;
+}
+
+/* Tables */
+/* line 45, ../sass/base/_basics.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 9px;
+}
+
+/* line 46, ../sass/base/_basics.scss */
+table, td, th {
+  border: 1px solid #ddd;
+}
+
+/* line 47, ../sass/base/_basics.scss */
+td, th {
+  padding: .125em .5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 48, ../sass/base/_basics.scss */
+td {
+  border-left: 1px dotted #eee;
+  border-right: 1px dotted #eee;
+}
+
+/* line 49, ../sass/base/_basics.scss */
+th {
+  background: #f9f9f9;
+  border-right: 1px solid #e9e9e9;
+  border-left: 1px solid #e9e9e9;
+}
+
+/* line 50, ../sass/base/_basics.scss */
+table caption {
+  color: #888;
+  text-align: left;
+  margin: .15em .25em;
+  font-style: italic;
+}
+
+/* line 51, ../sass/base/_basics.scss */
+tfoot {
+  font-weight: bold;
+}
+/* line 52, ../sass/base/_basics.scss */
+tfoot td {
+  color: #666;
+  border-top-color: #666;
+}
+
+/* line 53, ../sass/base/_basics.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* Lists */
+/* line 57, ../sass/base/_basics.scss */
+ol {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+/* line 58, ../sass/base/_basics.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+/* line 59, ../sass/base/_basics.scss */
+ol ol ol {
+  list-style-type: lower-roman;
+}
+/* line 60, ../sass/base/_basics.scss */
+ol ol ol ol {
+  list-style-type: decimal;
+}
+/* line 61, ../sass/base/_basics.scss */
+ol ol ol ol ol {
+  list-style-type: lower-alpha;
+}
+/* line 62, ../sass/base/_basics.scss */
+ol ol ol ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* line 63, ../sass/base/_basics.scss */
+ul {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+/* line 64, ../sass/base/_basics.scss */
+ul ul {
+  list-style-type: circle;
+}
+/* line 65, ../sass/base/_basics.scss */
+ul ul ul {
+  list-style-type: disc;
+}
+/* line 66, ../sass/base/_basics.scss */
+ul ul ul ul {
+  list-style-type: circle;
+}
+/* line 67, ../sass/base/_basics.scss */
+ul ul ul ul ul {
+  list-style-type: disc;
+}
+/* line 68, ../sass/base/_basics.scss */
+ul ul ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 69, ../sass/base/_basics.scss */
+ul ul {
+  margin-top: .25em;
+  margin-bottom: .25em;
+}
+
+/* line 70, ../sass/base/_basics.scss */
+nav ul, nav ul ul {
+  list-style: none;
+}
+
+/* line 71, ../sass/base/_basics.scss */
+nav ul, nav li {
+  margin: 0;
+}
+
+/* line 72, ../sass/base/_basics.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 73, ../sass/base/_basics.scss */
+dd {
+  padding: 0 0 0.75em 1em;
+}
+
+/* line 74, ../sass/base/_basics.scss */
+dl, menu, ol, ul {
+  padding: 0;
+}
+
+/*** Type ***/
+/* Make this the same color as the bottom footer */
+/* line 31, ../sass/base.scss */
+html {
+  background-color: #dddddd;
+}
+
+/* line 34, ../sass/base.scss */
+body {
+  background-color: #fff;
+}
+
+/* line 38, ../sass/base.scss */
+body, button, input, select, textarea {
+  color: #444;
+  font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 45, ../sass/base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+/* line 50, ../sass/base.scss */
+h2, h3, h4, h5, h6 {
+  color: #444;
+}
+
+/* line 51, ../sass/base.scss */
+h1 {
+  font-size: 2em;
+  margin: 20px 0 10px;
+  line-height: 1.1;
+}
+
+/* line 52, ../sass/base.scss */
+h2 {
+  font-size: 1.65em;
+  margin: 15px 0 10px;
+  line-height: 1.1;
+}
+
+/* line 53, ../sass/base.scss */
+h3 {
+  font-size: 1.25em;
+}
+
+/* line 54, ../sass/base.scss */
+h4 {
+  font-size: 1.1em;
+}
+
+/* line 55, ../sass/base.scss */
+h5 {
+  font-size: 1em;
+}
+
+/* line 56, ../sass/base.scss */
+h6 {
+  font-size: .9em;
+}
+
+/* line 57, ../sass/base.scss */
+p, pre {
+  margin: 10px 0;
+}
+
+/* line 59, ../sass/base.scss */
+code {
+  color: #d14;
+}
+
+/* line 61, ../sass/base.scss */
+a {
+  -webkit-transition: background 0.1s ease;
+  -moz-transition: background 0.1s ease;
+  -o-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+
+/** Positioning **/
+/* line 70, ../sass/base.scss */
+#main-header, #search-menu, #content, #page-footer, .nav-container {
+  position: relative;
+}
+
+/*** Header ***/
+/* line 79, ../sass/base.scss */
+#main-header {
+  background-color: #003366;
+  border-bottom: 1px solid #003366;
+}
+
+/* line 85, ../sass/base.scss */
+#header-top {
+  position: relative;
+}
+/* line 87, ../sass/base.scss */
+#header-top h1 {
+  font-size: 2.2em;
+  margin: 0 5% .25em;
+}
+/* line 90, ../sass/base.scss */
+#header-top h1 a {
+  color: #fff;
+}
+/* line 92, ../sass/base.scss */
+#header-top a.sign-in {
+  position: absolute;
+  top: .35em;
+  right: 5%;
+}
+
+/* line 99, ../sass/base.scss */
+#logo, #byu-bar {
+  padding: .35em 0 .45em;
+}
+/* line 102, ../sass/base.scss */
+#logo a.byu, #logo a.byulink, #byu-bar a.byu, #byu-bar a.byulink {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  display: inline-block;
+  height: 26px;
+  width: 70px;
+  background: transparent url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header-sm.png") 0px 0px no-repeat;
+}
+/* line 108, ../sass/base.scss */
+.svg #logo a.byu, .svg #logo a.byulink, .svg #byu-bar a.byu, .svg #byu-bar a.byulink {
+  background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header-sm.svg");
+}
+/* line 113, ../sass/base.scss */
+#logo a.parentlink, #byu-bar a.parentlink {
+  text-transform: uppercase;
+  font-size: 15px;
+  display: inline-block;
+  padding: 3px 0px 2px;
+  color: #d1e4f6;
+  line-height: 1.2;
+  min-height: 26px;
+  vertical-align: top;
+}
+/* line 123, ../sass/base.scss */
+#logo h2, #byu-bar h2 {
+  margin: 0;
+  margin-right: 100px;
+  line-height: 26px;
+}
+/* line 128, ../sass/base.scss */
+#logo a, #byu-bar a {
+  display: block;
+}
+
+/* line 131, ../sass/base.scss */
+a.mybyu, a.sign-in, .open #search-button, #search-submit, .search-submit, .gcse-wrapper input.gsc-search-button {
+  background-color: #628cb6;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 18px;
+  text-decoration: none;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
+}
+/* line 139, ../sass/base.scss */
+a.mybyu:hover, a.mybyu:active, a.sign-in:hover, a.sign-in:active, .open #search-button:hover, .open #search-button:active, #search-submit:hover, #search-submit:active, .search-submit:hover, .search-submit:active, .gcse-wrapper input.gsc-search-button:hover, .gcse-wrapper input.gsc-search-button:active {
+  margin: -2px;
+  background-color: #336699;
+  border: 2px solid #abc8e4;
+  cursor: pointer;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+}
+
+/* line 148, ../sass/base.scss */
+#search-submit:hover, #search-submit:active {
+  border: none;
+}
+
+/* line 154, ../sass/base.scss */
+.menu-button {
+  display: none;
+}
+
+/*** Search ***/
+/* Search box styling for mobile */
+/* line 179, ../sass/base.scss */
+#search-menu {
+  width: 100%;
+  position: relative;
+  display: block;
+  background-color: #001948;
+  border-top: 1px solid #114477;
+  border-bottom: 1px solid #114477;
+  height: 36px;
+  padding-top: 1px;
+  padding-bottom: 4px;
+}
+
+/* line 198, ../sass/base.scss */
+#search-container textarea:hover,
+#search-container input:hover,
+#search-container textarea:active,
+#search-container input:active,
+#search-container textarea:focus,
+#search-container input:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+/* line 204, ../sass/base.scss */
+#search-container #basic-search {
+  position: relative;
+  padding-right: 77px;
+  padding-left: 5px;
+}
+/* line 208, ../sass/base.scss */
+#search-container #basic-search label {
+  color: #fff;
+}
+/* line 214, ../sass/base.scss */
+#search-container #search-submit {
+  background-image: url(../img/search_box_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -1000px;
+  padding: 5px;
+  display: block;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+/* line 226, ../sass/base.scss */
+#search-container #search-submit:hover, #search-container #search-submit:active {
+  right: 7px;
+}
+/* line 232, ../sass/base.scss */
+#search-container #basic-search #search, #search-container input.gsc-input {
+  margin-bottom: 0;
+  vertical-align: top;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  padding: 5px 10px !important;
+  border: 0 !important;
+  font-size: 13px;
+  display: block;
+  width: 100%;
+}
+
+/*** Navigation ***/
+/* line 264, ../sass/base.scss */
+.nav-container a {
+  font-size: 14px;
+  padding: .5em 0;
+  display: block;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* line 271, ../sass/base.scss */
+.nav-container a:hover, .nav-container a:active {
+  background-color: #eeebe9;
+  color: #001948;
+}
+/* line 277, ../sass/base.scss */
+.nav-container .mega a, .nav-container .sub a, .nav-container .sublinks a {
+  font-weight: normal;
+  padding-left: 10%;
+}
+/* line 282, ../sass/base.scss */
+.nav-container .featured, .nav-container .highlight {
+  display: none;
+}
+/* line 286, ../sass/base.scss */
+.nav-container .sublinks {
+  list-style: none;
+  font-size: 13px;
+}
+/* line 289, ../sass/base.scss */
+.nav-container .sublinks a {
+  padding-left: 15%;
+}
+
+/* line 295, ../sass/base.scss */
+#primary-nav, #secondary-nav {
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* Sidebar nav */
+/* line 302, ../sass/base.scss */
+nav.sidebar {
+  display: none;
+}
+
+/* line 309, ../sass/base.scss */
+.sidebar-navigation nav.sidebar {
+  border-top: 1px solid #ddd;
+  display: block;
+  padding-top: .5em;
+  margin-top: 1em;
+}
+/* line 315, ../sass/base.scss */
+.sidebar-navigation nav.sidebar a {
+  padding: .2em 0;
+  display: block;
+  color: #003366;
+}
+/* line 319, ../sass/base.scss */
+.sidebar-navigation nav.sidebar a:hover {
+  text-decoration: underline;
+  background-color: #eeebe9;
+  color: #001948;
+}
+/* line 325, ../sass/base.scss */
+.sidebar-navigation nav.sidebar .current a {
+  color: #666;
+}
+/* line 327, ../sass/base.scss */
+.sidebar-navigation nav.sidebar .current a:hover {
+  text-decoration: none;
+}
+
+/*** Main Content ***/
+/* line 349, ../sass/base.scss */
+.wrapper {
+  margin: 0;
+}
+
+/* line 351, ../sass/base.scss */
+#content {
+  padding: 1em 5% 2em;
+}
+/* line 353, ../sass/base.scss */
+#content h1 {
+  color: #002255;
+}
+
+/* line 357, ../sass/base.scss */
+.breadcrumb {
+  display: none;
+}
+
+/* line 363, ../sass/base.scss */
+#calendar h2 {
+  margin-bottom: 0;
+}
+
+/* line 366, ../sass/base.scss */
+.day a, .day span {
+  display: block;
+}
+/* line 367, ../sass/base.scss */
+.day span.date {
+  margin-right: .33em;
+  display: inline;
+  font-weight: normal;
+}
+
+/* line 373, ../sass/base.scss */
+#calendars {
+  margin: 0;
+  padding: .5em 0 0;
+}
+
+/* line 378, ../sass/base.scss */
+#calendar, #news {
+  border-top: 4px solid #f7f7f7;
+  margin-top: 1px;
+  padding-bottom: 1em;
+}
+
+/* line 383, ../sass/base.scss */
+#calendar, #news {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 384, ../sass/base.scss */
+ul#calendars {
+  list-style: none;
+}
+
+/* line 385, ../sass/base.scss */
+.day {
+  padding: .75em 0 0;
+}
+
+/* line 386, ../sass/base.scss */
+a.baseline, #calendar > strong, a.more {
+  font-weight: bold;
+  margin-top: 1.5em;
+  padding-bottom: 1.5em;
+  display: block;
+}
+
+/* line 394, ../sass/base.scss */
+.news-item {
+  padding: .25em 0 0;
+}
+
+/* line 395, ../sass/base.scss */
+.briefs-item {
+  padding: .1em 0 0;
+}
+
+/* line 396, ../sass/base.scss */
+#briefs-container {
+  border-bottom: 1px solid #eee;
+  padding-bottom: .75em;
+  margin-bottom: .5em;
+}
+
+/* line 404, ../sass/base.scss */
+#page-footer {
+  background-color: #e8e8e8;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 408, ../sass/base.scss */
+#page-footer a, #page-footer a:link, #page-footer a:visited {
+  color: #6b6a69;
+  display: block;
+  padding: .35em 1%;
+  font-size: .95em;
+}
+/* line 413, ../sass/base.scss */
+#page-footer a:hover, #page-footer a:active, #page-footer a:focus {
+  color: #595857;
+}
+/* line 415, ../sass/base.scss */
+#page-footer h2 {
+  color: #595857;
+  margin-top: 1.5em;
+  font-size: 1em;
+  border-bottom: 1px solid #c7c7c7;
+}
+/* line 420, ../sass/base.scss */
+#page-footer h3 {
+  font-weight: normal;
+  color: #595857;
+  font-size: .95em;
+  margin: 1em 0 0;
+}
+/* line 425, ../sass/base.scss */
+#page-footer p {
+  color: #6b6a69;
+  font-size: .95em;
+}
+/* line 428, ../sass/base.scss */
+#page-footer .wrapper {
+  margin: 9px 5%;
+}
+
+/* line 433, ../sass/base.scss */
+#footer-links {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5em;
+}
+/* line 436, ../sass/base.scss */
+#footer-links div.alpha {
+  margin-top: 0;
+  border-top: none;
+}
+/* line 438, ../sass/base.scss */
+#footer-links .addthis_default_style a {
+  clear: left;
+  padding: 0;
+}
+/* line 440, ../sass/base.scss */
+#footer-links .addthis_toolbox a {
+  padding-left: 0;
+}
+/* line 442, ../sass/base.scss */
+#footer-links .addthis_toolbox a span {
+  padding-right: 10px;
+  margin: 0;
+}
+
+/* line 446, ../sass/base.scss */
+#footer-bottom {
+  background-color: #dddddd;
+  border-top: 1px solid #fff;
+  padding-bottom: 1.5em;
+}
+/* line 451, ../sass/base.scss */
+#footer-bottom a, #footer-bottom a:link, #footer-bottom a:visited {
+  color: #595857;
+}
+
+@media all and (max-width: 939px) {
+  /* line 460, ../sass/base.scss */
+  .feature-description {
+    border-left: none !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+/* Variables */
+/* line 9, ../sass/responsive/_byu-bar.scss */
+#byu-bar {
+  font-size: 14px;
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  width: 100%;
+  padding: 2px 0;
+  background-color: #001948;
+  border-bottom: 1px solid black;
+  min-width: 120px;
+  height: 30px;
+  white-space: nowrap;
+}
+/* line 20, ../sass/responsive/_byu-bar.scss */
+.svg #byu-bar {
+  background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-header-bg.svg");
+}
+/* line 24, ../sass/responsive/_byu-bar.scss */
+#byu-bar h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: absolute;
+  font-size: 1em;
+  width: 100%;
+}
+/* line 33, ../sass/responsive/_byu-bar.scss */
+#byu-bar a.byu {
+  background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo.png");
+}
+/* line 35, ../sass/responsive/_byu-bar.scss */
+.svg #byu-bar a.byu {
+  background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo.svg");
+}
+/* line 40, ../sass/responsive/_byu-bar.scss */
+#byu-bar a.byulink {
+  margin-left: 6px;
+}
+/* line 44, ../sass/responsive/_byu-bar.scss */
+#byu-bar a.parentlink {
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 98px;
+  padding-right: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 59, ../sass/responsive/_byu-bar.scss */
+#byu-bar.button a.parentlink {
+  padding-right: 110px;
+}
+/* line 63, ../sass/responsive/_byu-bar.scss */
+#byu-bar.search a.parentlink {
+  padding-right: 40%;
+}
+/* line 67, ../sass/responsive/_byu-bar.scss */
+#byu-bar.search.button a.parentlink {
+  width: 65%;
+  padding-right: 100px;
+}
+/* line 72, ../sass/responsive/_byu-bar.scss */
+#byu-bar #search-container {
+  height: 27px;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 40%;
+  min-width: 120px;
+  max-width: 400px;
+}
+/* line 82, ../sass/responsive/_byu-bar.scss */
+#byu-bar #basic-search #search {
+  height: 27px;
+}
+/* line 86, ../sass/responsive/_byu-bar.scss */
+#byu-bar #search-submit {
+  top: 0;
+}
+/* line 88, ../sass/responsive/_byu-bar.scss */
+#byu-bar #search-submit:active, #byu-bar #search-submit:hover {
+  right: 5px;
+}
+/* line 93, ../sass/responsive/_byu-bar.scss */
+#byu-bar.search .sign-in {
+  margin-right: 35%;
+}
+/* line 97, ../sass/responsive/_byu-bar.scss */
+#byu-bar.button #search-container {
+  width: 35%;
+}
+
+@media all and (min-width: 400px) {
+  /* line 108, ../sass/responsive/_byu-bar.scss */
+  #byu-bar a.byu {
+    width: 345px;
+  }
+
+  /* line 112, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search a.byu,
+  #byu-bar.button a.byu {
+    width: 80px;
+  }
+}
+@media all and (min-width: 500px) {
+  /* line 120, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.button a.byu {
+    width: 345px;
+  }
+
+  /* line 121, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search.button a.byu {
+    width: 80px;
+  }
+}
+@media all and (min-width: 600px) {
+  /* line 125, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search a.byu {
+    width: 345px;
+  }
+
+  /* line 126, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search.button a.byu {
+    width: 80px;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 130, ../sass/responsive/_byu-bar.scss */
+  #byu-bar.search.button a.byu {
+    width: 345px;
+  }
+}

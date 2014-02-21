@@ -1,0 +1,127 @@
+/* innovation.sass */
+
+
+@import "bootstrap/variables"
+@import "bootstrap/mixins"
+// @import "bootstrap/navs"
+
+@import "shared/colors"
+@import "shared/variables"
+
+
+
+
+
+// Main
+
+
+*
+	position: relative
+	box-sizing: border-box
+
+body
+	background-image: none
+
+#content
+	box-shadow: none
+	@media all and (min-width: 71.625em)
+		max-width: 1146px
+		width: 1146px
+
+#search-container
+	opacity: 0
+
+
+
+
+
+
+// Header
+$header-height: 300px
+$logo-height: $header-height - ($header-height * 0.05)
+$header-color: #3e78b3
+
+#main-header
+	height: $header-height
+	background-color: $header-color
+	border-top: 1px solid transparent
+	border-bottom: none
+	&, .svg &
+		background-image: none
+
+#header-top
+	h1 a
+		background: url(../img/cid_logo.png) top left no-repeat
+		background-size: $logo-height $logo-height
+		display: block
+		height: $header-height
+		width: 500px
+
+
+#site-name
+	&, &:hover
+		text-shadow: none
+
+
+
+
+
+
+// Nav
+$nav-font-size: 1
+$nav-button-height: $nav-font-size * 16px * 2.3
+
+.nav-container
+	top: $header-height - $nav-button-height
+	border: none
+	background-color: transparent
+	box-shadow: none
+	a
+		font-size: $nav-font-size + em
+		height: $nav-button-height
+
+#primary-nav
+	ul
+		left: $header-height
+	li.hover > a
+		border-radius: 0
+	a
+		background-color: rgba($blue4, 0)
+		transition: background-color 0.2s ease
+	a.current, a:hover
+		background-color: rgba($blue4, 1)
+		background-image: none
+
+
+
+
+
+
+// Content
+
+
+
+
+
+
+
+
+// Drupal admin
+ul.tabs.primary
+	position: absolute
+	top: -10px
+	right: 0
+	border-bottom: none
+	z-index: 1000
+	li 
+		a
+			border: 1px solid $linkColor
+			+border-radius(4px)
+			color: $blue1
+			background-color: $blue9
+			&:hover, &:active
+				background-color: $blue8
+		&.active a
+			border: none
+			color: #999
+			background: #fff
