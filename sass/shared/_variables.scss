@@ -8,15 +8,15 @@ $asset-base: '//home.byu.edu/home/sites/default/files/global/';
 
 // Screen width breakpoints
 
-$small-width: 16em;	// 256px - Doesn't need to be explicitly used, as responsive styles aren't loaded in the markup until this point
-$med-width: 37.5em;		// 600px - Tablets
-$large-width: 56.25em;	// 900px - Tablets, desktops
-$larger-width: 71.625em;	// 1146px - Desktops (940px content width with 9% margins)
-$extralarge-width: 95em;	// 1520px - It's huuuge!
+$small-width: 256px;	// 16em/256px - Doesn't need to be explicitly used, as responsive styles aren't loaded in the markup until this point
+$med-width: 600px;		// 37.5em/600px - Tablets
+$large-width: 900px;	// 56.25em/900px - Tablets, desktops
+$larger-width: 1146px;	// 71.625em/1146px - Desktops (940px content width with 9% margins)
+$extralarge-width: 1520px;	// 95em/1520px - Huuuge!
 
 // THIS CAN CHANGE FOR EACH SITE THAT USES THE TEMPLATE.
-// Probably the lowest threshold that should be used is 45em.
-$full-menu-width: 60em;	// 960px - Menu should be in the header at this screen width. 
+// Probably the lowest threshold that should be used is 45em/720px.
+$full-menu-width: 720px;	// 60em/960px - Menu should be in the header at this screen width. 
 
 
 

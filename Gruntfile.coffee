@@ -60,11 +60,19 @@ module.exports = (grunt) ->
 				trace: true
 				loadPath: ['sass/','sass/**/*']
 				sourcemap: true
-			compile:
+			innovation:
 				files:[
 					expand: true
 					cwd: 'sass/'
 					src: ['innovation.sass']
+					dest: 'css/'
+					ext: '.css'
+				]
+			responsive:
+				files:[
+					expand: true
+					cwd: 'sass/'
+					src: ['responsive.scss']
 					dest: 'css/'
 					ext: '.css'
 				]
@@ -75,9 +83,15 @@ module.exports = (grunt) ->
 			src: 'css/innovation.css'
 
 		watch:
-			sass:
-				files: ['sass/**/*.sass', 'sass/**/*.scss']
-				tasks: ['sass', 'autoprefixer']
+			sass_innovation:
+				files: ['sass/innovation.sass']
+				tasks: ['sass:innovation', 'autoprefixer']
+			sass_responsive:
+				files: ['sass/responsive.scss', 'sass/responsive/**/*.scss']
+				tasks: ['sass:responsive', 'autoprefixer']
+			sass_all:
+				files: ['sass/shared/**/*.scss']
+				tasks: ['sass', 'autoprefixer']				
 
 			js:
 				files: ['js/innovation.js', 'js/script.js']

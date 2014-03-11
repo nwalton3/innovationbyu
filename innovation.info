@@ -6,7 +6,8 @@ core        = 7.x
 base theme = byu
 
 ; STYLESHEETS
-stylesheets[screen][] = css/innovation.css
+stylesheets[screen and (min-width:300px)][] = css/responsive.css
+stylesheets[screen, projection][] = css/innovation.css
 
 regions[help]        	= Help
 regions[feature]        = Featured Content

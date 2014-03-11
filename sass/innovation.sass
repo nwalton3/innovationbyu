@@ -31,36 +31,60 @@ body
 #search-container
 	opacity: 0
 
+#search-menu
+	z-index: 4
+
 
 
 
 
 
 // Header
-$header-height: 300px
-$logo-height: $header-height - ($header-height * 0.05)
+
+$header-height: 60px
+$header-left: 20px
+$header-top: $header-height * .1
+$logo-height: $header-height - (2 * $header-top)
 $header-color: #3e78b3
 
 #main-header
 	height: $header-height
 	background-color: $header-color
 	border-top: 1px solid transparent
-	border-bottom: none
+	border-bottom: 1px solid $blue4
 	&, .svg &
 		background-image: none
 
 #header-top
-	h1 a
-		background: url(../img/cid_logo.png) top left no-repeat
-		background-size: $logo-height $logo-height
-		display: block
-		height: $header-height
-		width: 500px
-
+	h1 
+		margin-top: $header-top
+		margin-left: $header-left
+		a
+			background: url(../img/cid_logo.png) top left no-repeat
+			background-size: $logo-height $logo-height
+			display: block
+			height: $header-height
+			z-index: 10
 
 #site-name
 	&, &:hover
 		text-shadow: none
+
+
+$big-header-height: 300px
+$big-logo-height: $header-height * 0.95
+
+.home
+	#main-header
+		height: $big-header-height
+
+	#header-top
+		h1 
+			a
+				background-size: $big-logo-height $big-logo-height
+				height: $big-header-height
+				width: 500px
+
 
 
 
@@ -72,20 +96,23 @@ $nav-font-size: 1
 $nav-button-height: $nav-font-size * 16px * 2.3
 
 .nav-container
-	top: $header-height - $nav-button-height
+	top: (($header-height - $nav-button-height) / 2 ) + 1
 	border: none
 	background-color: transparent
 	box-shadow: none
+	margin-left: $header-height + $header-left
 	a
 		font-size: $nav-font-size + em
 		height: $nav-button-height
 
 #primary-nav
+	padding-left: 0
 	ul
-		left: $header-height
+		left: 5px
 	li.hover > a
 		border-radius: 0
 	a
+		padding: 0.5em 1.2em
 		background-color: rgba($blue4, 0)
 		transition: background-color 0.2s ease
 	a.current, a:hover
@@ -98,8 +125,16 @@ $nav-button-height: $nav-font-size * 16px * 2.3
 
 
 // Content
-
-
+#feature
+	margin-bottom: 3em
+	@media (max-width: 939px)
+		.anythingSlider
+			box-sizing: content-box
+	@media (min-width: 940px)
+		.feature-image
+			padding-right: 240px
+		.feature-description
+			width: 240px
 
 
 
