@@ -43,16 +43,14 @@
  *
  * @ingroup themeable
  */
+
+$css_title = drupal_clean_css_identifier($block->subject);
+$css_title = strtolower($css_title);
+
+
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-
-  <?php print render($title_prefix); ?>
-<?php if ($block->subject): ?>
-  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-<?php endif;?>
-  <?php print render($title_suffix); ?>
-
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php print $content ?>
-  </div>
+<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> <?php print $css_title; ?> <?php print $block->css_class; ?>"<?php print $attributes; ?>>
+	<div class="block-wrapper clearfix">
+    	<?php print $content ?>
+	</div>
 </div>

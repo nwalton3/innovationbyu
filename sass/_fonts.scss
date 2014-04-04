@@ -1,0 +1,12 @@
+$font-path: "/sites/all/themes/innovation/font/bebasneue/";
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url($font-path + 'BebasNeue-webfont.eot');
+    src: url($font-path + 'BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url($font-path + 'BebasNeue-webfont.woff') format('woff'),
+         url($font-path + 'BebasNeue-webfont.ttf') format('truetype'),
+         url($font-path + 'BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}

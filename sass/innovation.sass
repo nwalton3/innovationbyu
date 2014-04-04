@@ -7,7 +7,9 @@
 
 @import "shared/colors"
 @import "shared/variables"
+@import "fonts"
 
+@import "responsive/faculty-view"
 
 
 
@@ -24,9 +26,8 @@ body
 
 #content
 	box-shadow: none
-	@media all and (min-width: 71.625em)
-		max-width: 1146px
-		width: 1146px
+	padding-left: 0
+	padding-right: 0
 
 #search-container
 	opacity: 0
@@ -34,9 +35,12 @@ body
 #search-menu
 	z-index: 4
 
-
-
-
+h1, h2, h3, h4, 
+.main-feature .read,
+.featured-items .text
+	font-family: "Bebas Neue", $sans-font-stack
+	text-transform: uppercase
+	font-weight: 400
 
 
 // Header
@@ -46,6 +50,7 @@ $header-left: 20px
 $header-top: $header-height * .1
 $logo-height: $header-height - (2 * $header-top)
 $header-color: #3e78b3
+$header-color-dark: mix($header-color, $blue3)
 
 #main-header
 	height: $header-height
@@ -127,14 +132,156 @@ $nav-button-height: $nav-font-size * 16px * 2.3
 // Content
 #feature
 	margin-bottom: 3em
-	@media (max-width: 939px)
+	.feature-description
+		padding: 0 4%
+	@media all and (max-width: 939px)
 		.anythingSlider
 			box-sizing: content-box
-	@media (min-width: 940px)
+	@media all and (min-width: 940px)
 		.feature-image
 			padding-right: 240px
 		.feature-description
 			width: 240px
+			padding: 0 2em
+
+@media all and (min-width: 71.625em)
+	#content
+		max-width: 100%
+		width: 100%
+
+	#feature
+		margin-left: 0
+		margin-right: 0
+
+
+
+// Stripes
+.block-byu-feature-slider
+	background-color: $blue8
+article
+	padding: 0 5%
+	max-width: 1080px
+	margin: 0 auto
+
+
+
+// Front Page
+.front-page
+	a, a:link, a:visited
+		color: $header-color
+	a:hover, a:active
+		color: $header-color-dark
+	&#content
+		padding-top: 0
+
+	.featured-items, .all-disciplines, .site-description, .quote, .upcoming-events, .recent-tweets
+		padding: 2em 0
+		.block-wrapper
+			max-width: 1200px
+			margin-left: auto
+			margin-right: auto
+
+	.main-feature, .all-disciplines, .quote, .recent-tweets
+		background-color: $header-color
+
+	.main-feature
+		.info
+			position: absolute
+			width: 100%
+			top: 50%
+			left: 0
+			text-align: center
+			top: - 1.5em
+			.text
+				display: inline-block
+				color: white
+				font-size: 3em
+				line-height: 1em
+				text-shadow: 0 0 6px rgba(0,0,0,0.5)
+			.read
+				display: block
+				background-color: $header-color
+				position: absolute
+				bottom: -2.5em
+				right: 0
+				font-size: 0.45em
+				padding: 0.5em
+				line-height: 1em
+				text-shadow: none
+				transition: all 0.2s ease
+				letter-spacing: 0.03em
+			p
+				display: inline
+		a:hover
+			.info .read
+				background-color: $header-color-dark
+				right: -3px
+
+	.featured-items
+		padding: 0.2em 0 3em
+		h2
+			margin-left: 3%
+			font-size: 2em
+			color: $header-color-dark
+		.feature-item
+			width: 29.33333%
+			float: left
+			margin-left: 3%
+			.text
+				display: block
+				font-size: 1.5em
+				padding: 0.35em 0
+				&:hover
+					text-decoration: none
+
+	.all-disciplines
+		text-align: center
+		padding: 1em
+		color: white
+		font-size: 2em
+		font-style: italic
+
+	.site-description
+		.col
+			width: 29.33333%
+			float: left
+			margin-left: 3%
+			text-align: center
+			a:hover
+				text-decoration: none
+	.quote
+		.block-wrapper
+			max-width: 36em
+			margin: 0 auto
+
+		blockquote
+			color: #fff
+			border-left: none
+			font-size: 1.5em
+			line-height: 1.4
+			font-style: italic
+			text-align: center
+			margin: 0
+			&:before, &:after
+				font-size: 1.6em
+				display: inline-block
+				position: relative
+				top: 0
+				left: 0
+				line-height: 0
+				color: rgba(255,255,255,0.5)
+			&:before
+				content: "“"
+				top: -5px
+				right: 2px
+			&:after
+				content: "”"
+				top: -4px
+		.attribution
+			text-align: right
+			color: rgba(255,255,255,0.6)
+			margin: 0.75em 0 0
+
 
 
 
