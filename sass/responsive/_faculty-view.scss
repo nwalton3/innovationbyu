@@ -1,36 +1,49 @@
-article header {
+
+.faculty-view div.field-name-field-photo img{
+	min-width:200px;
+	min-height:200px;
+	max-width:200px;
+	max-height:200px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;               
+    }
+    
+.faculty-view table, td, th {
+    border:none;
+    text-align:center
+    }
+    
+.faculty-view header h2{
+	position:relative;
+	padding:0px;
+    margin:0px;
+	bottom:-235px;
     text-align:center;
-    margin:20px
 }
 
-header img{
-    height:200px;
-    width:200px;
-    max-height:200px;
-    max-width:200px;
+.faculty-view header h2 a{
+	color:#EF5053;
+	font-family:'Whitney SSm A';
+	font-size:15px;
+	font-weight:500px;
+	line-height:20px;
+	padding:0px;
+	margin:0px;
 }
 
-header h2{
+.faculty-view div.field-name-field-discipline{
     position:relative;
-    padding:0px;
-    margin:20px 0px 0px 0px;
-    bottom:75px;
+	bottom:-30px;
+	font-size:15px;
+	font-weight:500px;
+	line-height:20px;
+	padding:0px;
+	margin:0px;
+	text-transform:uppercase;
+	color:#68A5B7;
 }
 
- header h2 a,  header h2 a:link, header h2 a:visited{
-     color:#FF4500;
- }
-
-header div.field.field-name-field-discipline{
-    position:relative;
-    bottom:-45px;
-    color:#3E78B3;
+.faculty-view article ul{
+	visibility:hidden;
 }
-
-header ul a{
-    display:none;
-}
-
-h1.title{
-    font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
-    color:#FF4500;}
