@@ -101,7 +101,9 @@ var byu_template = (function ($) {
 		
 
 		$("body").click(function(){
-			$(".hover").removeClass("hover");
+			$(".hover").removeClass("hover").each(function(){
+				redrawElement( $(this) );
+			});
 		}); 
 		
 		$("#content").click(function(){
