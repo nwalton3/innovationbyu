@@ -55,12 +55,18 @@ var byu_template = (function ($) {
 			// Only close menu if user clicked to open it
 			if (li.hasClass('hover') && clickOpened) {
 				li.removeClass('hover');
+				redrawElement( li );
 			}
 			else {
 				li.addClass('hover');
-				$('nav li').not(li).removeClass('hover');
+				$('#primary-nav li.hover').not(li).removeClass('hover').each(function(){
+					redrawElement( $(this) );
+				});
 				clickOpened = true;
 			}
+
+			
+
 			return false;
 		});
 
@@ -102,6 +108,19 @@ var byu_template = (function ($) {
 			$("body").removeClass("sideNav");
 		});
 		
+	}
+
+
+	/**
+	* Redraw Element
+	* Forces a redraw of a DOM element
+	*/
+	function redrawElement(element) {
+		var el = element.get(0);
+
+		el.style.display='none';
+		el.offsetHeight; // no need to store this anywhere, the reference is enough
+		el.style.display='block';
 	}
 	
 	/**

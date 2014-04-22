@@ -9,6 +9,9 @@ base theme = byu
 stylesheets[screen and (min-width:300px)][] = css/responsive.css
 stylesheets[screen, projection][] = css/innovation.css
 
+; SCRIPTS
+scripts[] = js/script.js
+
 regions[help]        	= Help
 regions[feature]        = Featured Content
 regions[content]        = Content
