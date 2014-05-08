@@ -147,6 +147,18 @@ $nav-button-height: $nav-font-size * 16px * 2.3
 
 
 // Content
+#content 
+	padding-bottom: 4em
+	h1.title
+		max-width: 1080px
+		margin: 1em auto
+		padding: 0 5%
+		font-size: 3em
+	article .field-type-image
+		padding: 0.5em 0 1.5em
+		&:first-child
+			padding-top: 0
+
 #feature
 	margin-bottom: 3em
 	.feature-description
@@ -229,7 +241,7 @@ article
 				color: white
 				font-size: 3em
 				line-height: 1em
-				text-shadow: 0 0 6px rgba(0,0,0,0.5)
+				text-shadow: 0 0 20px rgba(0,0,0,0.9)
 			.read
 				display: block
 				background-color: $header-color
