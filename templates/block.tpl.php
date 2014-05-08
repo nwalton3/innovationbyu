@@ -49,8 +49,6 @@ $css_title = strtolower($css_title);
 
 
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> <?php print $css_title; ?> <?php print $block->css_class; ?>"<?php print $attributes; ?>>
-	<div class="block-wrapper clearfix">
-    	<?php print $content ?>
-	</div>
+<div id="<?php print $block_html_id; ?>" class="clearfix <?php print $classes; ?> <?php print $css_title; ?> <?php print $block->css_class; ?>"<?php print $attributes; ?>>
+	<?php print $content ?>
 </div>

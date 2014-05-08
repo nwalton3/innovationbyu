@@ -16,7 +16,6 @@
 
 // Main
 
-
 *
 	position: relative
 	box-sizing: border-box
@@ -28,6 +27,7 @@ body
 	box-shadow: none
 	padding-left: 0
 	padding-right: 0
+	padding-bottom: 0
 
 #search-container
 	opacity: 0
@@ -37,10 +37,19 @@ body
 
 h1, h2, h3, h4, 
 .main-feature .read,
-.featured-items .text
+.featured-items .text,
+#footer-links h2
 	font-family: "Bebas Neue", $sans-font-stack
 	text-transform: uppercase
 	font-weight: 400
+
+
+
+
+
+
+
+
 
 
 // Header
@@ -96,6 +105,10 @@ $big-logo-height: $header-height * 0.95
 
 
 
+
+
+
+
 // Nav
 $nav-font-size: 1
 $nav-button-height: $nav-font-size * 16px * 2.3
@@ -129,6 +142,10 @@ $nav-button-height: $nav-font-size * 16px * 2.3
 
 
 
+
+
+
+
 // Content
 #feature
 	margin-bottom: 3em
@@ -155,6 +172,10 @@ $nav-button-height: $nav-font-size * 16px * 2.3
 
 
 
+
+
+
+
 // Stripes
 .block-byu-feature-slider
 	background-color: $blue8
@@ -162,6 +183,13 @@ article
 	padding: 0 5%
 	max-width: 1080px
 	margin: 0 auto
+
+
+
+
+
+
+
 
 
 
@@ -173,9 +201,13 @@ article
 		color: $header-color-dark
 	&#content
 		padding-top: 0
+	h2
+		margin-left: 3%
+		font-size: 2em
+		color: $header-color-dark
 
 	.featured-items, .all-disciplines, .site-description, .quote, .upcoming-events, .recent-tweets
-		padding: 2em 0
+		padding: 4em 0
 		.block-wrapper
 			max-width: 1200px
 			margin-left: auto
@@ -219,10 +251,6 @@ article
 
 	.featured-items
 		padding: 0.2em 0 3em
-		h2
-			margin-left: 3%
-			font-size: 2em
-			color: $header-color-dark
 		.feature-item
 			width: 29.33333%
 			float: left
@@ -236,12 +264,16 @@ article
 
 	.all-disciplines
 		text-align: center
-		padding: 1em
+		padding: 2em 1em
 		color: white
 		font-size: 2em
 		font-style: italic
+		background-color: rgba($header-color, 0.65)
 
 	.site-description
+		padding: 5em 0
+		h2
+			margin-left: 0
 		.col
 			width: 29.33333%
 			float: left
@@ -250,10 +282,7 @@ article
 			a:hover
 				text-decoration: none
 	.quote
-		.block-wrapper
-			max-width: 36em
-			margin: 0 auto
-
+		padding: 3.5em 0 3em
 		blockquote
 			color: #fff
 			border-left: none
@@ -261,7 +290,8 @@ article
 			line-height: 1.4
 			font-style: italic
 			text-align: center
-			margin: 0
+			max-width: 24em
+			margin: 0 auto
 			&:before, &:after
 				font-size: 1.6em
 				display: inline-block
@@ -280,7 +310,41 @@ article
 		.attribution
 			text-align: right
 			color: rgba(255,255,255,0.6)
-			margin: 0.75em 0 0
+			padding: 0.75em 0 0
+			max-width: 36em
+			margin: 0 auto
+
+	.upcoming-events
+		width: 94%
+		margin: auto
+		h2
+			margin: 0 0 0.35em
+		.views-row
+			padding: 0.5em 0
+			border-bottom: 1px solid mix($blue9, #ccc)
+			&:last-child
+				border-bottom: none
+		.date
+			font-size: 1em
+		.title
+			margin-top: 0.25em
+			font-size: 1.15em
+			text-indent: 0.35em
+			font-weight: bold
+		@media (min-width: 52em)
+			.date
+				float: left
+				width: 38.2%
+				text-align: right
+			.title
+				margin-left: 39.2%
+				margin-top: 0
+
+
+
+
+
+
 
 
 
@@ -315,3 +379,54 @@ ul.tabs.primary
 
 
 
+
+
+
+
+
+
+
+
+
+// Footer
+#page-footer, #footer-links
+	background-color: $header-color-dark
+
+#page-footer
+	p, .col div
+		color: mix($header-color, #fff)
+	.social-media
+		ul
+			list-style: none
+			margin: 0
+		a
+			.svg-icon
+				opacity: 0.7
+				width: 60px
+				transition: all 0.2s ease
+			&:hover .svg-icon
+				opacity: 1
+#footer-links
+	padding: 2em 0 4em
+	border-bottom: none
+	h2
+		color: white
+		font-size: 1.5em
+		border-bottom: none
+		letter-spacing: 0.04em
+
+	@media (min-width: 900px)
+		.wrapper
+			width: 94%
+			margin: 0 auto
+		.col
+			width: 31.33%
+			margin: 0
+			&.alpha
+				margin-right: 3%
+			&.omega
+				float: right
+
+
+#footer-bottom
+	display: none
