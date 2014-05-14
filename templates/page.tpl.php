@@ -7,41 +7,43 @@
 
 <header id="main-header" role="banner">
 	<div id="header-top" class="wrapper">
-			
-		<?php if ($site_name): ?>
-			<h1>
-				<a href="<?php print $front_page; ?>" class="ir" id="site-name" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
-			</h1>
-		<?php endif; ?>
+		<h1>
+			<a href="<?php print $front_page; ?>" id="site-logo" title="<?php print t('Home'); ?>" rel="home"></a>
+			<a href="<?php print $front_page; ?>" id="site-name" title="<?php print t('Home'); ?>" rel="home">
+				<acronym class="name cid" title="Creativity Innovation Design">CID</acronym>
+				<span class="name creativity">Creativity</span>
+				<span class="name innovation">Innovation<span class="amp">&amp;</span></span>
+				<span class="name design">Design</span>
+				<acronym class="name byu" title="Brigham Young University">BYU</acronym>
+			</a>
+		</h1>
 	</div>
-</header>
 
-<div id="search-menu">
-	<div id="search-container" role="search"></div>
-	<a href="#primary-nav" class="menu-button">Menu</a>  
-</div>
-	
-<div class="nav-container">
-		<nav id="primary-nav" role="navigation">	
-			<?php
-				if ($main_menu):
-					if (module_exists('byu_megamenu')) {
-						print _renderMainMenu();
-					} else {
-						$menu = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-						print drupal_render($menu);	
-					}
-				endif; 
-			?>
-		</nav>
-		
-		<nav id="secondary-nav" role="navigation">
-			<?php if ($secondary_menu):
-				$menu = menu_tree(variable_get('menu_secondary_links_source', 'secondary-menu'));
-				print drupal_render($menu);	
-			endif; ?>
-		</nav>
-</div>
+
+	<div class="nav-container">
+			<nav id="primary-nav" role="navigation">	
+				<?php
+					if ($main_menu):
+						if (module_exists('byu_megamenu')) {
+							print _renderMainMenu();
+						} else {
+							$menu = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+							print drupal_render($menu);	
+						}
+					endif; 
+				?>
+			</nav>
+			
+			<nav id="secondary-nav" role="navigation">
+				<?php if ($secondary_menu):
+					$menu = menu_tree(variable_get('menu_secondary_links_source', 'secondary-menu'));
+					print drupal_render($menu);	
+				endif; ?>
+			</nav>
+	</div>
+
+
+</header>
 
 <?php 
 // Render the sidebars to see if there's anything in them.

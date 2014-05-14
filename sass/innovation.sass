@@ -14,9 +14,39 @@
 
 
 
+// Extenders
+%transition
+	transition: all 200ms ease
+
+%alt-titles
+	font-family: $sans-font-stack
+	text-transform: none
+	letter-spacing: 0
+	font-weight: bold
+	font-size: 1.5em
+
+
+=header-height( $height )
+	$logo-height: $height * 0.95
+	#main-header
+		height: $height
+	#header-top
+		h1 
+			#site-logo
+				background-size: $logo-height $logo-height
+				height: $height
+				width: $height
+			#site-name
+				left: $height + 10px
+
+	#content
+		padding-top: $height
+
+
+
 // Main
 
-*
+*, *:before, *:after
 	position: relative
 	box-sizing: border-box
 
@@ -25,9 +55,11 @@ body
 
 #content
 	box-shadow: none
-	padding-left: 0
-	padding-right: 0
-	padding-bottom: 0
+	padding: 0
+	transition: padding 200ms ease
+
+#main-content
+	padding: 0 5%
 
 #search-container
 	opacity: 0
@@ -38,10 +70,12 @@ body
 h1, h2, h3, h4, 
 .main-feature .read,
 .featured-items .text,
-#footer-links h2
+#footer-links h2,
+h1 a, h1 .amp
 	font-family: "Bebas Neue", $sans-font-stack
 	text-transform: uppercase
 	font-weight: 400
+	font-style: normal
 
 
 
@@ -61,43 +95,78 @@ $logo-height: $header-height - (2 * $header-top)
 $header-color: #3e78b3
 $header-color-dark: mix($header-color, $blue3)
 
+
 #main-header
 	height: $header-height
 	background-color: $header-color
 	border-top: 1px solid transparent
 	border-bottom: 1px solid $blue4
+	@extend %transition
+	z-index: 100
 	&, .svg &
 		background-image: none
+	.scrollTop &
+		height: $header-height
+	.js &
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
 
 #header-top
-	h1 
+	h1
 		margin-top: $header-top
 		margin-left: $header-left
-		a
+		a#site-logo
 			background: url(../img/cid_logo.png) top left no-repeat
 			background-size: $logo-height $logo-height
 			display: block
+			width: $header-height
 			height: $header-height
 			z-index: 10
+			@extend %transition
 
 #site-name
 	&, &:hover
 		text-shadow: none
+	position: absolute
+	top: 0
+	left: $header-height + 10px
+	line-height: 0.9
+	font-size: 1.5em
+	@extend %transition
+	acronym
+		&.cid
+			display: inline-block
+		&.byu
+			color: rgba(#fff, 0.5)
+	span
+		&.innovation, &.creativity, &.design
+			display: none
+		&.amp
+			opacity: 0.5
+			line-height: 0.9
 
 
-$big-header-height: 300px
-$big-logo-height: $header-height * 0.95
+$header-height: 240px
 
-.home
-	#main-header
-		height: $big-header-height
+body.atTop.front
+	+header-height( $header-height )
+	#site-name
+		top: 0.5em
+		acronym
+			&.cid, &.byu
+				display: none
+		span
+			&.innovation
+				display: block
+			&.creativity, &.design
+				display: inline-block
 
-	#header-top
-		h1 
-			a
-				background-size: $big-logo-height $big-logo-height
-				height: $big-header-height
-				width: 500px
+
+
+
+
 
 
 
@@ -114,11 +183,15 @@ $nav-font-size: 1
 $nav-button-height: $nav-font-size * 16px * 2.3
 
 .nav-container
-	top: (($header-height - $nav-button-height) / 2 ) + 1
+	top: auto
+	bottom: 0.65em
 	border: none
 	background-color: transparent
 	box-shadow: none
-	margin-left: $header-height + $header-left
+	left: $header-height - 18px
+	@extend %transition
+	.atTop.front &
+		left: $header-height + 9px
 	a
 		font-size: $nav-font-size + em
 		height: $nav-button-height
@@ -211,8 +284,6 @@ article
 		color: $header-color
 	a:hover, a:active
 		color: $header-color-dark
-	&#content
-		padding-top: 0
 	h2
 		margin-left: 3%
 		font-size: 2em
@@ -252,7 +323,7 @@ article
 				padding: 0.5em
 				line-height: 1em
 				text-shadow: none
-				transition: all 0.2s ease
+				@extend %transition
 				letter-spacing: 0.03em
 			p
 				display: inline
@@ -359,6 +430,21 @@ article
 
 
 
+// Innovation Labs
+.page-innovation-labs
+	article
+		h2
+			@extend %alt-titles
+		.field-type-image
+			float: left
+			margin-right: 1em
+			top: -0.3em
+
+.page-projects
+	article h2
+		@extend %alt-titles
+
+
 
 
 
@@ -367,7 +453,7 @@ article
 // Drupal admin
 ul.tabs.primary
 	position: absolute
-	top: -10px
+	//top: -10px
 	right: 0
 	border-bottom: none
 	z-index: 1000
@@ -415,7 +501,7 @@ ul.tabs.primary
 			.svg-icon
 				opacity: 0.7
 				width: 60px
-				transition: all 0.2s ease
+				@extend %transition
 			&:hover .svg-icon
 				opacity: 1
 #footer-links

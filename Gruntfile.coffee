@@ -18,38 +18,15 @@ module.exports = (grunt) ->
 				banner: '/*! <%= pkg.name %> - v<%= pkg.version %>  */'
 				compress: true
 				report: 'min'
-			byuticketsjs:
-				options:
-					sourceMap: 'js/byutickets.min.js.map'
-					sourceMappingURL: 'byutickets.min.js.map'
-				files:
-					'js/innovation.min.js': [	
-						#'js/bootstrap/bootstrap-transition.js',
-						#'js/bootstrap/bootstrap-collapse.js',
-						#'js/bootstrap/bootstrap-tab.js',
-						# 'js/plugins/hashchange.js',
-						'js/innovation.js' ]
 			scriptjs:
 				options:
-					sourceMap: 'js/innovation.min.js.map'
-					sourceMappingURL: 'innovation.min.js.map'
+					sourceMap: 'js/script.min.js.map'
+					sourceMappingURL: 'script.min.js.map'
 				files:
-					'js/innovation.min.js' : 'js/innovation.js'
-
-		# jshint:
-		# 	options:
-		# 		"camelcase" : false
-		# 		"es3" : false
-		# 		"trailing" : false
-		# 		"white" : false
-		# 		"smarttabs" : true
-		# 		"jquery" : true
-		# 		"browser" : true
-		# 		"laxcomma" : true
-		# 	files:[
-		# 		'js/byutickets.js',
-		# 		'js/script.js'
-		# 	]
+					'js/script.min.js' : [
+						'js/plugins/throttle-debounce.jquery.min.js',
+						'js/script.js'
+					]
 
 
 		sass:

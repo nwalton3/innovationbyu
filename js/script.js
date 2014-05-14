@@ -33,66 +33,87 @@ var byu_template = (function ($) {
 		// Execute menu activation and search load only after window width exceeds 250px
 		executeAfterBreakpoint( [ activateMenus, loadSearch ], 256);
 		fixNavForDrupalAdmin();
+		checkScroll();
+
+		$(window).scroll( $.throttle(100, checkScroll) );
+
 	});
 
 	
+
+
+	/* Func: checkScroll
+	 * Desc: Check to see where we are in the scrolling
+	 * Args: none
+	 */
+	function checkScroll() {
+		var top = $(window).scrollTop();
+		var topClass = 'atTop';
+		var hasTopClass = $('body').hasClass( topClass );
+		var downScrollThreshold = 45;
+		var upScrollThreshold = 25;
+
+		if ( top > downScrollThreshold ) {
+			$('body').removeClass( topClass );
+		} else if ( !hasTopClass && top < upScrollThreshold ) {
+			$('body').addClass( topClass );
+		}
+	}
+
+
+
+
+
+
 	/* Func: ActivateMenus
 	 * Desc: Get the menus going
 	 * Args: none
 	 */
 	function activateMenus() {
+
 		$('#search-menu').delegate('.menu-button', 'click', function (e) {
 			e.stopPropagation();
 			e.preventDefault();
 			$('body').toggleClass('sideNav');
 		});
 
-		$('nav li:has(.mega, .sub) > a').click(function (e) {
+		$('#primary-nav li > a').on('click', function (e) {
 			e.preventDefault();
 
-			var li = $(this).parent();
+			var hoverClass = 'hover';
+			var li = $(e.target).closest('li');
+			var open = li.hasClass( hoverClass );
 
 			// Only close menu if user clicked to open it
-			if (li.hasClass('hover') && clickOpened) {
-				li.removeClass('hover');
+			if ( open && clickOpened ) {
+
+				li.removeClass( hoverClass );
 				redrawElement( li );
 			}
 			else {
-				li.addClass('hover');
-				$('#primary-nav li.hover').not(li).removeClass('hover').each(function(){
+				$('#primary-nav li.' + hoverClass ).not(li).removeClass('hover').each(function(){
 					redrawElement( $(this) );
 				});
+				li.addClass( hoverClass );
 				clickOpened = true;
 			}
-
-			
-
-			return false;
 		});
 
-		$('nav li:has(.mega, .sub)').click(function (e) {
+		$('#primary-nav li').click(function (e) {
 			e.stopPropagation();
 		});
 
-		/* Positions menu divs */
-		$('nav li .sub').each(function () {
-			var mega = $(this);
-			var left = mega.parent().position().left;
-			if (left > mega.parent().parent().outerWidth() - mega.outerWidth()) {
-				mega.css('right', 0);
-			}
-		});
-
-		//Listener for if screen is resized to close sideNav
+		//Listener for if screen is resized
 		$(window).resize(function (){
-			fixNavForDrupalAdmin();	
-		
+			$.throttle(250, fixNavForDrupalAdmin);
+			
+			// Control side nav vs top nav
 			if ($(window).width() > '37.5em'){
 				$('body').removeClass('sideNav');
 			} else if ($(window).width() < "60em" && $(".hover")[0]){
 				$("body").addClass("sideNav");
 			}
-		
+
 		});
 		
 		$(".toolbar-toggle-processed").click(function() {
@@ -134,7 +155,27 @@ var byu_template = (function ($) {
 			var toolbarHeight = $('#toolbar').height();
                 $("body").css('padding-top', toolbarHeight );
 		}
+		setNavTop();
 	}
+
+
+
+	/* Func: setNavTop
+	 * Desc: Set the top of the fixed nav to the right position
+	 * Args: none
+	 */
+	function setNavTop() {
+		var contentTop = $('#content').offset().top;
+		var header = $('#main-header');
+		var headerTop = header.css('top');
+
+
+		if( contentTop != headerTop ) {
+			header.css('top', contentTop);
+		}
+
+	}
+
 
 	
 	/* Func: loadSearch
@@ -182,4 +223,15 @@ var byu_template = (function ($) {
 	Auth: Nate Walton (BYU Web Community Project) */
 	window.executeAfterBreakpoint=function(functionObject,breakpoint){"use strict";function checkBreakpoint(){!functionsExecuted&&$(window).width()>breakpoint&&(executeFunctions(),$(window).off("resize",checkBreakpoint))}function executeFunctions(){var len=functions.length;functionsExecuted=!0;for(var x=0;len>x;x++)functions[x]()}var functionsExecuted=!1,functions=functionObject;return"function"==typeof functionObject&&(functions=[functionObject]),!functions instanceof Array?(console.log("ExecuteAfterBreakpoint error: functionObj must be a function or an array of functions"),console.log("Syntax: executeAfterBreakpoint(functionObj, breakpoint)"),console.log("Your argument: "+functionObject),void 0):"number"!=typeof breakpoint?(console.log("ExecuteAfterBreakpoint error: breakpoint must be a number"),console.log("Syntax: executeAfterBreakpoint(functionObj, breakpoint)"),console.log("Your argument: "+breakpoint),void 0):(!functionsExecuted&&$(window).width()>breakpoint?executeFunctions():$(window).resize(checkBreakpoint),void 0)}
 
-}(jQuery));
+	}(jQuery));
+
+
+/*!
+ * jQuery throttle / debounce - v1.1 - 3/7/2010
+ * http://benalman.com/projects/jquery-throttle-debounce-plugin/
+ * 
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+(function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
