@@ -64,20 +64,19 @@ var byu_template = (function ($) {
 
 
 
-
 	/* Func: ActivateMenus
 	 * Desc: Get the menus going
 	 * Args: none
 	 */
 	function activateMenus() {
 
-		$('#search-menu').delegate('.menu-button', 'click', function (e) {
+		$('#search-menu').on( 'click', '.menu-button', function (e) {
 			e.stopPropagation();
 			e.preventDefault();
 			$('body').toggleClass('sideNav');
 		});
 
-		$('#primary-nav li > a').on('click', function (e) {
+		$('nav li:has(.mega, .sub) > a').on('click', function (e) {
 			e.preventDefault();
 
 			var hoverClass = 'hover';
@@ -99,7 +98,7 @@ var byu_template = (function ($) {
 			}
 		});
 
-		$('#primary-nav li').click(function (e) {
+		$('nav li:has(.mega, .sub)').on('click', function (e) {
 			e.stopPropagation();
 		});
 
